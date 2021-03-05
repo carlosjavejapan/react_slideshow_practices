@@ -124,6 +124,9 @@ const Slide = styled.div`
         width: 100%;
         vertical-align: top;
     }
+    /* @media only screen and (max-width: 600px) {
+        padding: 0 10px;
+    } */
 `;
 const TextSlide = styled.div`
     width: 100%;
@@ -132,6 +135,10 @@ const TextSlide = styled.div`
     background: ${props => props.colorFondo ? props.colorFondo : 'rgba(0,0,0,0.2)'};
     text-align: center;
     color: #fff;
+    @media only screen and (max-width: 600px) {
+        position: relative;
+        font-size: 12px;
+    }
 `;
 
 const Controles = styled.div`
@@ -159,12 +166,15 @@ const Boton = styled.button`
             fill: #fff;
         }
     }
-
+    /* @media only screen and (max-width: 600px) {
+        ${props => props.derecho ? 'right: 10px' : 'left: 10px'}
+    } */
     path {
         filter: ${props => props.derecho ? 'drop-shadow(-2px 0px 0px #fff)' : 'drop-shadow(2px 0px 0px #fff)' }
     }
 
     ${props => props.derecho ? 'right: 0' : 'left: 0'}
+    
 `;
  
 export {Slideshow, Slide, TextSlide};
